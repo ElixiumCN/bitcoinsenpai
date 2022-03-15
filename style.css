@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+/* grids */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+  }
+  
+  .grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    /* font-size: 30px; */
+    text-align: center;
+  }
+
 /* Style the video: 100% width and height to cover the entire window */
 #background-video {
     width: 100vw;
-    height: 100vh;
+    height:100%;
     object-fit: cover;
     position: fixed;
     /* object-fit and position are new */
@@ -12,6 +28,8 @@
     top: 0;
     bottom: 0;
     z-index: -1;
+    overflow:visible;
+    overflow:scroll;
  
     }
 
@@ -26,23 +44,40 @@
 }
 
 .colordiv {
-    padding:120px;
+    padding:50px;
     margin-left:-1%;
     margin-top:-1%;
     display:flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    position:fixed;
+    /* this one? */
     background-color: rgb(25, 25, 112, 0.75 );
     background-size:200vh; 
+    
+
+}
+
+body {
+    overflow:visible;
+    overflow:scroll;
 
 }
 
 h1 {
+    padding:0px;
     /* color: red; */
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.fakelinks {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    /* text-decoration:none; */
+    /* padding-bottom: 50; */
 
 }
 
@@ -92,6 +127,9 @@ a:link {
 .white{
     color:white;
     font-family: 'Open Sans', sans-serif;
+    display:flex;
+    flex-wrap: wrap;
+
 }
 
 .red{
@@ -103,12 +141,45 @@ a:link {
 }
 
 .center {
-    text-align: center;
+    /* text-align: center; */
+    display:flex;
+    align-items:center;
+    
+    justify-content:center;
+    /* flex-wrap: wrap; */
+    /* flex-direction:column; */
+
+
+}
+
+.center2 {
+ 
+    display:flex;
+    justify-content:center;
+    /* flex-wrap: wrap; */
+    flex-direction:column;
+    /* width:20%; */
+
+}
+
+.widthimg {
+    /* margin:0 auto; */
+    
+    width:20%;
+
 }
 
 .widthtext{
     margin:0 auto;
-    width:66%;
+    width:50%;
+    /* justify-content:right; */
+    display:flex;
+    flex-wrap: wrap;
+    text-align: left;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+
+
 }
 
 .pagetxt{
