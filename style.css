@@ -6,30 +6,37 @@
     height: 100vh;
     object-fit: cover;
     position: fixed;
+    /* object-fit and position are new */
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: -1;
+ 
     }
 
 *{
     box-sizing: border-box;
     /* padding: 10px, 10px, 10px, 10px; */
     /* top, right, bottom, left */
-    padding: 10px;  
-    margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
+
+
+  /* lots of little adjustments required to margin & padding for fitting video backgrounds. */
+  
 }
 
 .colordiv {
+    padding:120px;
+    margin-left:-1%;
+    margin-top:-1%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    position:fixed;
     background-color: rgb(25, 25, 112, 0.75 );
-    width:100%;
-    height:100%;
+    background-size:200vh; 
 
-    
 }
 
 h1 {
@@ -42,20 +49,23 @@ h1 {
 #navbar{
     /* background-color: black; */
     display:flex;
-    justify-content:space-evenly;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    text-align:center;
     align-items: center;
     /* flex-direction: column; */
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-    color:white;
-    /* border-style: groove;
-    border-color: black; */
-
-    
+    color:white; 
+    /* flex-wrap.. wrap vs nowrap */
 }
 
 /* unvisited link */
 a:link {
+    padding:3px;
+    /* border-style: groove;
+    border-color: black; */
+    display:block;
     color: white;
     text-decoration: none;
   }
